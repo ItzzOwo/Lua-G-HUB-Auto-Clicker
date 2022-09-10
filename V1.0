@@ -1,0 +1,23 @@
+EnablePrimaryMouseButtonEvents(true);
+function OnEvent(event, arg)
+if IsKeyLockOn("capslock")then
+if  IsMouseButtonPressed(5)then
+   repeat
+   Sleep(math.random(10,30))
+   PressMouseButton(1)
+   Sleep(math.random(22,57))
+   ReleaseMouseButton(1)
+   i = math.random(0,100)
+   if( i < 64 ) then
+   PressMouseButton(1)
+   Sleep(math.random(3,9))
+   ReleaseMouseButton(1)
+   Sleep(2)
+   PressMouseButton(1)
+   Sleep(math.random(10,57))
+   ReleaseMouseButton(1)
+   end
+   until not IsMouseButtonPressed(5)
+end
+end
+end
